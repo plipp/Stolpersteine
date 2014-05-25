@@ -1,0 +1,8 @@
+.sencha
+.architect
+.sass-cache
+build
+archive
+*.iml
+.architect
+.idea
