@@ -17,19 +17,28 @@
          "update": "delta"
       }
    ],
-   "css": [
-      {
-         "update": "delta",
-         "platform": [
-            "phone",
-            "tablet",
-            "desktop"
-         ],
-         "theme": "Default",
-         "path": "resources/css/sencha-touch.css",
-         "_architect_active_theme": true
-      }
-   ],
+    "css": [
+        {
+            "path": "resources/css/sencha-touch.css",
+            "platform": ["ie10", "bb10", "desktop"],
+            "exclude": ["ios", "ios-classic", "android", "chrome", "firefox", "safari"],
+            "update": "delta"
+        },
+        {
+            "path": "resources/css/cupertino.css",
+            "platform": ["ios", "ios-classic"],
+            "exclude": ["chrome", "ie10", "bb10", "desktop", "android", "firefox", "safari"],
+            "theme": "Cupertino",
+            "update": "delta"
+        },
+        {
+            "path": "resources/css/mountainview.css",
+            "platform": ["android", "chrome", "firefox", "safari"],
+            "exclude": ["ie10", "bb10", "desktop", "ios", "ios-classic"],
+            "theme": "MountainView",
+            "update": "delta"
+        }
+    ],
    "appCache": {
       "cache": [
          "index.html",
