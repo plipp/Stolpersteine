@@ -65,7 +65,7 @@ Ext.define('Stolpersteine.controller.MainController', {
                 new google.maps.event.trigger( markers[id], 'click' );
             },
             function (error) {
-                console.error("Couldn't find new Map Center:", error);
+                console.error("Couldn' find new Map Center:", error);
             });
 
         this.getListPinsButton().show();
@@ -137,7 +137,7 @@ Ext.define('Stolpersteine.controller.MainController', {
     addStolpersteineOnMap: function (googleMap) {
         function infoWindowTextBy(title, location, description) {
             return Ext.String.format(
-                '<div style="line-height:1.35;overflow:hidden;white-space:nowrap;color:black"><b>{0}</b><br/>{1}<br/>{2}</p></div>',
+                '<div style="line-height:1.35;overflow:hidden;white-space:nowrap;"><b>{0}</b><br/>{1}<br/>{2}</p></div>',
                 title, location, description);
         }
 

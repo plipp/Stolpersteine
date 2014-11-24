@@ -5,9 +5,6 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    requires: [
-        'Ext.MessageBox'
-    ],
     models: [
         'Location'
     ],
@@ -27,18 +24,6 @@ Ext.application({
     launch: function() {
 
         Ext.create('Stolpersteine.view.MainView', {fullscreen: true});
-    },
-
-    onUpdated: function() {
-        Ext.Msg.confirm(
-            "Application Update",
-            "This application has just successfully been updated to the latest version. Reload now?",
-            function(buttonId) {
-                if (buttonId === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
     }
 
 });
